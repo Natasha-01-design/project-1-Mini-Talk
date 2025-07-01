@@ -30,8 +30,8 @@ function loadReports() {
 }
 
 function loadJusticeNews() {
-    const apiKey = "c87926825ea6c0270b4191913294fafc";
-    const url = `https://gnews.io/api/v4/search?q=justice&lang=en&max=5&apikey=${apiKey}`;
+    const apiKey = "pub_ecb70293783649cdae1ba6a68ef51797";
+    const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=justice&language=en`;
 
     fetch(url)
         .then(response => response.json())
@@ -39,18 +39,19 @@ function loadJusticeNews() {
             const newsList = document.getElementById("news-list");
             newsList.innerHTML = "";
 
-            if (!data.articles || data.articles.length === 0) {
+            // Check `data.results`, NOT `data.articles`
+            if (!data.results || data.results.length === 0) {
                 newsList.innerHTML = "<p>No justice-related news found.</p>";
                 return;
             }
 
-            data.articles.forEach(article => {
+            data.results.forEach(article => {
                 const div = document.createElement("div");
                 div.classList.add("news-item");
                 div.innerHTML = `
                     <h4>${article.title}</h4>
                     <p>${article.description || "No description available."}</p>
-                    <a href="${article.url}" target="_blank">Read more</a>
+                    <a href="${article.link}" target="_blank">Read more</a>
                     <hr/>
                 `;
                 newsList.appendChild(div);
@@ -61,6 +62,7 @@ function loadJusticeNews() {
             document.getElementById("news-list").innerHTML = "<p>Error loading news.</p>";
         });
 }
+
 
 window.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);

@@ -12,24 +12,7 @@
     }
   ],
   "reports": [
-    {
-      "id": "1",
-      "title": "Police Brutality in Nairobi",
-      "description": "A peaceful protest turned violent. Officers used tear gas.",
-      "videoURL": ""
-    },
-    {
-      "id": "2",
-      "title": "Land Dispute in Kisumu",
-      "description": "A family was evicted despite a court order.",
-      "videoURL": ""
-    },
-    {
-      "id": "9707",
-      "title": "gen-z protest",
-      "description": "death of an innoscent mask seller",
-      "videoURL": ""
-    },
+   
     {
       "id": "1677",
       "title": "A cry for my rights",
@@ -49,5 +32,4 @@
       "videoURL": ""
     }
   ]
-  
 }
