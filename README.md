@@ -50,7 +50,7 @@ Copy
 Edit
 git clone https://github.com/your-username/minitalk.git
 cd minitalk
-Step 3: Start the Mock API Server
+Step 3: Start the API Server
 bash
 Copy
 Edit
@@ -71,19 +71,10 @@ const apiKey = "YOUR_API_KEY_HERE";
 License
 This project is licensed under the MIT License.
 
-text
-Copy
-Edit
-
-
 Copyright (c) 2025 [Natasha Karwitha]
 Author
 [Natasha Karwitha]
-
-
-yaml
-Copy
-Edit
+[https://github.com/Natasha-01-design/project1-redone.git]
 
 
 
