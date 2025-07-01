@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicEYE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+  
+</head>
+<body>
+    <div class="container">
+        <h1>CivicEYE</h1>
+        <p>Welcome to CivicEYE, your platform for civic engagement and community action.</p>
+        <button id="loginButton">Login</button>
+        <button id="registerButton">Register</button>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+
+        document.getElementById('registerButton').addEventListener('click', function() {
+            window.location.href = 'register.html';
+        });
+    </script>
+    <footer>
+        <p>&copy; 2025 CivicEYE. All rights reserved.</p>
+    </footer>
+</div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #666;
+    }
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #999;
+    }
+</style>        
+</body>
+</html>
