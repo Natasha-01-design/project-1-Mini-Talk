@@ -40,11 +40,27 @@
         <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
     </div>
 
-   <section class="mainAPP"id="mainAPP">
-    
+ <section class="mainAPP" id="mainAPP" style="display:none;">
+  <h2>Submit Anonymous Report</h2>
+  <form id="report-form">
+    <input type="text" id="reportTitle" placeholder="Report Title" required />
+    <textarea id="reportDescription" placeholder="Describe the issue" required></textarea>
+    <input type="text" id="videoURL" placeholder="Paste video URL (optional)" />
+    <button type="submit">Submit Report</button>
+  </form>
 
+  <h3>Public Reports</h3>
+  <div id="report-list"></div>
 
-   </section>
+  <h3>Latest Justice News</h3>
+  <div id="news-list"></div>
+</section>
+
+ 
+  <h3>Public Reports</h3>
+  <div id="report-list"></div>
+</section>
+
    
        
     </script>
