@@ -1,0 +1,30 @@
+{
+  "users": [],
+  "reports": [],
+  "lawyers": [
+    {
+      "id": 1,
+      "name": "Jane Mwangi",
+      "specialty": "Human Rights",
+      "location": "Nairobi",
+      "email": "jane@justice.org",
+      "phone": "+254712345678"
+    },
+    {
+      "id": 2,
+      "name": "David Otieno",
+      "specialty": "Land Disputes",
+      "location": "Mombasa",
+      "email": "david@legalhelp.org",
+      "phone": "+254798765432"
+    },
+    {
+      "id": 3,
+      "name": "Susan Kamau",
+      "specialty": "Whistleblower Protection",
+      "location": "Kisumu",
+      "email": "susan@justiceforall.org",
+      "phone": "+254722334455"
+    }
+  ]
+}
