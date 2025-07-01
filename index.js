@@ -18,10 +18,14 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
-  
+
   document.getElementById('login-section').style.display = 'none';
   document.getElementById('mainAPP').style.display = 'block';
-  loadJusticeNews();
+
+  loadJusticeNews();  
+  loadReports();     
+});
+
 });
 function loadJusticeNews() {
   const apiKey = "67e406e147f34793b7070319ec9eadd3";
@@ -54,6 +58,57 @@ function loadJusticeNews() {
       console.error("Error fetching news:", error);
       document.getElementById("news-list").innerHTML = "<p>Error loading news.</p>";
     });
+    const reportForm = document.getElementById("report-form");
+const reportList = document.getElementById("report-list");
+
+reportForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const title = document.getElementById("reportTitle").value;
+  const description = document.getElementById("reportDescription").value;
+  const videoURL = document.getElementById("videoURL").value;
+
+  const newReport = {
+    title,
+    description,
+    videoURL
+  };
+
+
+  fetch("http://localhost:3000/reports", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newReport)
+  })
+    .then(res => res.json())
+    .then(addedReport => {
+      displayReport(addedReport);
+      reportForm.reset(); 
+    });
+});
+
+function displayReport(report) {
+  const div = document.createElement("div");
+  div.classList.add("report-item");
+  div.innerHTML = `
+    <h4>${report.title}</h4>
+    <p>${report.description}</p>
+    ${report.videoURL ? `<a href="${report.videoURL}" target="_blank">Watch Video</a>` : ""}
+    <hr/>
+  `;
+  reportList.appendChild(div);
+}
+
+
+function loadReports() {
+  fetch("http://localhost:3000/reports")
+    .then(res => res.json())
+    .then(data => {
+      reportList.innerHTML = "";
+      data.forEach(displayReport);
+    });
+}
+
 }
 
    
