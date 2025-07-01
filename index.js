@@ -16,5 +16,13 @@ window.addEventListener('DOMContentLoaded', function() {
         document.getElementById('home-section').style.display = 'none';
         document.getElementById('register-section').style.display = 'block';
     }
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  
+  document.getElementById('login-section').style.display = 'none';
+  document.getElementById('mainAPP').style.display = 'block';
+  loadJusticeNews();
+});
+
    
 });
