@@ -36,6 +36,10 @@ function loadJusticeNews() {
     .then(response => response.json())
     .then(data => {
       const newsList = document.getElementById("news-list");
+      if (!newsList) {
+        console.error('Element with id "news-list" not found.');
+        return;
+      }
       newsList.innerHTML = "";
 
       if (!data.results || data.results.length === 0) {
@@ -57,7 +61,10 @@ function loadJusticeNews() {
     })
     .catch(error => {
       console.error("Error fetching news:", error);
-      document.getElementById("news-list").innerHTML = "<p>Error loading news.</p>";
+      const newsList = document.getElementById("news-list");
+      if (newsList) {
+        newsList.innerHTML = "<p>Error loading news.</p>";
+      }
     });
 }
 
@@ -75,17 +82,17 @@ window.addEventListener("DOMContentLoaded", function () {
   const page = new URLSearchParams(window.location.search).get("page");
 
   // Auto-login if loggedIn flag is set
-  if (localStorage.getItem("loggedIn") === "true") {
-    showSection("mainAPP");
-    loadJusticeNews();
-    loadReports();
-  } else if (page === "login") {
-    showSection("login-section");
-  } else if (page === "register") {
-    showSection("register-section");
-  } else {
-    showSection("home-section");
-  }
+ if (page === "login") {
+  showSection("login-section");
+} else if (page === "register") {
+  showSection("register-section");
+} else if (localStorage.getItem("loggedIn") === "true") {
+  showSection("mainAPP");
+  loadJusticeNews();
+  loadReports();
+} else {
+  showSection("home-section");
+}
 
   const loginButton = document.getElementById("loginButton");
   if (loginButton) {
@@ -157,3 +164,12 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+const logoutButton = document.getElementById("logoutButton");
+if (logoutButton) {
+  logoutButton.addEventListener("click", function () {
+    localStorage.removeItem("loggedIn");
+    showSection("home-section");
+    window.history.pushState({}, "", "index.html"); 
+  });
+}
+
