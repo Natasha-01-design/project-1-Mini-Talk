@@ -1,45 +1,57 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "admin123"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "testuser",
       "password": "testpass"
     }
   ],
   "reports": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Police Brutality in Nairobi",
       "description": "A peaceful protest turned violent. Officers used tear gas.",
       "videoURL": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Land Dispute in Kisumu",
       "description": "A family was evicted despite a court order.",
+      "videoURL": ""
+    },
+    {
+      "id": "9707",
+      "title": "gen-z protest",
+      "description": "death of an innoscent mask seller",
+      "videoURL": ""
+    },
+    {
+      "id": "1677",
+      "title": "A cry for my rights",
+      "description": "My name is Grace Achieng’, widow of David Otieno, and mother to our only son, Kevin.\n\nWhen David died in a road accident, I didn’t just lose a husband — I lost everything. His brothers came days after the funeral, demanding our home, saying, “A woman doesn’t inherit in this family.”\n\nI had lived in that house with David for 11 years. We built a life there. But without a written will, they threw me out. One day I came back from the market, and the locks had been changed. Kevin’s books, our clothes — dumped outside like trash.\n\nI begged the chief. I sought legal help. Nothing came fast enough. Today, Kevin and I live in a tiny rented room, far from the only home he knew. He asks when we’re going back. I have no answer.\n\nThis isn’t just my story. It's the story of many widows in Kenya. Traditions are used to strip us of our dignity, even when the Constitution protects our rights.\n\nI am a mother. I am a widow. And I demand justice.\nLet no woman be left homeless for burying her husband. Let the law protect us — not just in writing, but in truth.\n\n\n\n\n\n\n\n\n\n\n",
       "videoURL": ""
     }
   ],
   "lawyers": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Faith Njeri",
       "specialty": "Human Rights",
       "contact": "faithlaw@justice.org"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Omondi Kiprono",
       "specialty": "Criminal Defense",
       "contact": "kipronodefense@justice.org"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Nyambura Wanjiku",
       "specialty": "Land & Property Law",
       "contact": "nyambura@lawfirm.org"
