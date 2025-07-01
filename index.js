@@ -19,7 +19,7 @@ function displayReport(report) {
 
 function loadReports() {
     const reportList = document.getElementById("report-list");
-    fetch("http://localhost:3002/reports")
+    fetch("http://localhost:3000/reports")
         .then(res => res.json())
         .then(data => {
             if (reportList) {
@@ -62,6 +62,7 @@ function loadJusticeNews() {
             document.getElementById("news-list").innerHTML = "<p>Error loading news.</p>";
         });
 }
+
 
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -120,7 +121,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 videoURL
             };
 
-            fetch("http://localhost:3002/reports", {
+            fetch("http://localhost:3000/reports", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
