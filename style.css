@@ -158,28 +158,29 @@
 }
 
 .report-item a {
-  color: #1a73e8;
+  color: #84ecf3;
   text-decoration: none;
   font-weight: 500;
 }
 .report-item {
-  background-color: #fff9f0;             
-  border: 1px solid #e0cfa0;            
+  background-color: #e6fbfc;             
+  border: 1px solid #baecf5;            
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 20px;                    
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(12, 11, 11, 0.1),
+         0 4px 8px rgba(12, 11, 11, 0.1);
   transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
 }
 
 .report-item:hover {
   transform: scale(1.01);
-  background-color: #fff3dd;              
+  background-color: #aabdc5;              
 }
 .report-item.expanded {
-  background-color: #fff0e0;
-  border-color: #d8b890;
+  background-color: #c6ebf5;
+  border-color: #a946b6;
 }
 
 
