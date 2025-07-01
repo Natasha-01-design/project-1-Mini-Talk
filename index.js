@@ -1,8 +1,8 @@
 document.getElementById('loginButton').addEventListener('click', function() {
-    const loginTab=window.open('index.html?page=login', '_blank');
+    window.open('index.html?page=login', '_blank');
 })
 document.getElementById('createAccountButton').addEventListener('click', function() {
-    const registerTab=window.open('index.html?page=register', '_blank');
+    window.open('index.html?page=register', '_blank');
 })
 window.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);

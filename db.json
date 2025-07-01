@@ -1,30 +1,48 @@
 {
-  "users": [],
-  "reports": [],
-  "lawyers": [
+  "users": [
     {
       "id": 1,
-      "name": "Jane Mwangi",
-      "specialty": "Human Rights",
-      "location": "Nairobi",
-      "email": "jane@justice.org",
-      "phone": "+254712345678"
+      "username": "admin",
+      "password": "admin123"
     },
     {
       "id": 2,
-      "name": "David Otieno",
-      "specialty": "Land Disputes",
-      "location": "Mombasa",
-      "email": "david@legalhelp.org",
-      "phone": "+254798765432"
+      "username": "testuser",
+      "password": "testpass"
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "title": "Police Brutality in Nairobi",
+      "description": "A peaceful protest turned violent. Officers used tear gas.",
+      "videoURL": "https://www.youtube.com/watch?v=example1"
+    },
+    {
+      "id": 2,
+      "title": "Land Dispute in Kisumu",
+      "description": "A family was evicted despite a court order.",
+      "videoURL": ""
+    }
+  ],
+  "lawyers": [
+    {
+      "id": 1,
+      "name": "Faith Njeri",
+      "specialty": "Human Rights",
+      "contact": "faithlaw@justice.org"
+    },
+    {
+      "id": 2,
+      "name": "Omondi Kiprono",
+      "specialty": "Criminal Defense",
+      "contact": "kipronodefense@justice.org"
     },
     {
       "id": 3,
-      "name": "Susan Kamau",
-      "specialty": "Whistleblower Protection",
-      "location": "Kisumu",
-      "email": "susan@justiceforall.org",
-      "phone": "+254722334455"
+      "name": "Nyambura Wanjiku",
+      "specialty": "Land & Property Law",
+      "contact": "nyambura@lawfirm.org"
     }
   ]
 }
