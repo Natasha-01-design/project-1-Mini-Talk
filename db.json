@@ -48,25 +48,6 @@
       "description": "Forced into marriage at age 10, one Afghan woman lost two daughters due to neglect and abuse. After enduring domestic violence, she escaped to Kabul but continued suffering under the Taliban, eventually fleeing to Iran. Now 26, she works as a tailor and advocates for women’s rights—all while mourning her missing children",
       "videoURL": ""
     }
-  ],
-  "lawyers": [
-    {
-      "id": "1",
-      "name": "Faith Njeri",
-      "specialty": "Human Rights",
-      "contact": "faithlaw@justice.org"
-    },
-    {
-      "id": "2",
-      "name": "Omondi Kiprono",
-      "specialty": "Criminal Defense",
-      "contact": "kipronodefense@justice.org"
-    },
-    {
-      "id": "3",
-      "name": "Nyambura Wanjiku",
-      "specialty": "Land & Property Law",
-      "contact": "nyambura@lawfirm.org"
-    }
   ]
+  
 }

@@ -8,6 +8,10 @@ function displayReport(report) {
         ${report.videoURL ? `<a href="${report.videoURL}" target="_blank">Watch Video</a>` : ""}
         <hr/>
     `;
+     // Toggle expansion on click
+  div.addEventListener("click", function () {
+    div.classList.toggle("expanded");
+  });
     if (reportList) {
         reportList.appendChild(div);
     }
@@ -26,7 +30,7 @@ function loadReports() {
 }
 
 function loadJusticeNews() {
-    const apiKey = "67e406e147f34793b7070319ec9eadd3";
+    const apiKey = "c87926825ea6c0270b4191913294fafc";
     const url = `https://gnews.io/api/v4/search?q=justice&lang=en&max=5&apikey=${apiKey}`;
 
     fetch(url)

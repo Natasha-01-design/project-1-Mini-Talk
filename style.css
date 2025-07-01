@@ -3,12 +3,13 @@
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-        background-image: url(https://images.stockcake.com/public/c/3/f/c3fccad9-811a-48e0-8ec4-9c372caf5264_large/illuminated-global-network-stockcake.jpg);
-    
+        background-image: url(https://images.unsplash.com/photo-1699100329878-7f28bb780787?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        /* Background image properties */
+        min-height: 100vh;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    
+            
         display: flex;
         justify-content: center;
         align-items: center; 
@@ -17,13 +18,13 @@
         font-family: 'Poppins', sans-serif;
  }
     .container {
-        max-width: 800px;
+        max-width: 500px;
         margin: 0 auto;
-        padding: 20px;
+       
         text-align: center;
         background-color: rgb(253, 251, 214);
         border-radius: 25px;
-        padding: 100px;
+        padding: 80px;
         box-shadow:orange 0px 0px 20px 0px,
                    orange 0px 0px 20px 0px
                     
@@ -120,26 +121,54 @@
   background-color: #0056b3;
 }
 
-/* REPORT CARDS */
+.report-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 .report-item {
-  background-color: #fff;
-  border-right: 6px solid #007BFF;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
-  transition: transform 0.2s;
+  width: 45%;
+  background-color: #e4e2e2;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  max-height: 120px;
+  position: relative;
 }
-.report-item:hover {
-  transform: scale(1.01);
+
+.report-item.expanded {
+  max-height: 1000px;
+  background-color: #e6e3e3;
 }
+
 .report-item h4 {
-  margin: 0 0 5px;
+  margin-top: 0;
+  color: #333;
 }
+
+.report-item p {
+  margin: 0.5rem 0;
+  color: #444;
+}
+
 .report-item a {
-  color: #007BFF;
+  color: #1a73e8;
   text-decoration: none;
+  font-weight: 500;
 }
-.report-item a:hover {
-  text-decoration: underline;
+.advice-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #0a7;
+  background-color: #f0fdf4;
+  font-style: italic;
+  color: #155724;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 500px;
 }
