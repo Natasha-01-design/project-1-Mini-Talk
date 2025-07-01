@@ -39,7 +39,6 @@ function loadJusticeNews() {
             const newsList = document.getElementById("news-list");
             newsList.innerHTML = "";
 
-            // Check `data.results`, NOT `data.articles`
             if (!data.results || data.results.length === 0) {
                 newsList.innerHTML = "<p>No justice-related news found.</p>";
                 return;
@@ -47,7 +46,7 @@ function loadJusticeNews() {
 
             data.results.forEach(article => {
                 const div = document.createElement("div");
-                div.classList.add("news-item");
+                div.classList.add("report-item","news-item");
                 div.innerHTML = `
                     <h4>${article.title}</h4>
                     <p>${article.description || "No description available."}</p>
