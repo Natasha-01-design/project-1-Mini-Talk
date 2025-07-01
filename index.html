@@ -3,58 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justice Lives</title>
+    <title>Mini Talk</title>
     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
    
   
 </head>
 <body>
+    <section class="heading">
     <div class="container" id="home-section">
-        <h1>Justice Lives</h1>
-        <p>Welcome to Justice Lives, your platform for civic engagement and community action.</p>
+        <h1>Mini Talk</h1>
+        <p>Welcome to Mini Talk, your platform for civic engagement and sharing your stories.</p>
         <button id="loginButton">Login</button>
         <button id="createAccountButton">Create Account</button>
     </div>
 
-  <div class="container"id="login-section"style="display:none;">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="#Create Account" id="createAccountLink">Create Account</a></p>
-    </div>
+<div class="container" id="login-section" style="display:none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="createAccountLink">Create Account</a></p>
+</div>
 
-    <div class="container"id="register-section" style="display:none;">
-        <h2>Create Account</h2>
-        <form id="registerForm">
-            <label for="newUsername">Username:</label>
-            <input type="text" id="newUsername" name="newUsername" required>
-            <label for="newPassword">Password:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-            <button type="submit">Create</button>
-        </form>
-        <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
-    </div>
+<div class="container" id="register-section" style="display:none;">
+    <h2>Create Account</h2>
+    <form id="registerForm">
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+        <label for="newPassword">Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <button type="submit">Create</button>
+    </form>
+    <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+</div>
+    </section>
 
  <section class="mainAPP" id="mainAPP" style="display:none;">
-  <h2>Open Up</h2>
-  <form id="report-form">
-    <input type="text" id="reportTitle" placeholder="Report Title" required />
-    <textarea id="reportDescription" placeholder="Describe the issue" required></textarea>
-    <input type="text" id="videoURL" placeholder="Paste video URL (optional)" />
+  <h2>Share your report</h2>
+  <form id="report-form" class="report-form">
+    <input type="text" id="reportTitle" placeholder="Report Title" class="report-title" required />
+    <textarea id="reportDescription" placeholder="Describe the issue" class="describe" required></textarea>
+    <input type="text" id="videoURL" placeholder="Paste video URL (optional)" class="report-title"/>
     <button type="submit">Submit Report</button>
   </form>
-
+<div id="report-list" class="report-list">
   <h3>Public Reports</h3>
-  <div id="report-list"></div>
+</div>
 
- 
+  <div id="news-list">
   <h3>Justice News</h3>
-  <div id="news-list"></div>
+ </div>
 </section>
 
 
