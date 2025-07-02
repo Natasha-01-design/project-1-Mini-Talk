@@ -4,7 +4,7 @@
 
 ## Features
 
-- User registration and login
+- User registration ,login and logout
 - Submit reports with title, description, and optional video URL
 - View all submitted reports
 - Real-time news feed from NewsData.io
