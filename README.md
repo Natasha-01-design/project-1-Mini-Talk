@@ -16,7 +16,7 @@
 - CSS3
 - JavaScript (ES6)
 - [json-server](https://github.com/typicode/json-server) for local REST API
-- [NewsData.io](https://newsdata.io/) for justice-related news
+- [gnews.io](https://gnews.io/) for justice-related news
 
 ## Folder Structure
 
@@ -60,7 +60,7 @@ Open index.html in your browser
 Or use Live Server in VS Code
 
 Configuring NewsData API
-Sign up for a free API key at newsdata.io
+Sign up for a free API key at gnews.io
 
 Open index.js and replace the placeholder:
 
