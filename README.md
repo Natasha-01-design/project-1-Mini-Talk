@@ -75,6 +75,9 @@ Copyright (c) 2025 [Natasha Karwitha]
 Author
 [Natasha Karwitha]
 [https://github.com/Natasha-01-design/project1-redone.git]
+## Live Demo
+[View the project on GitHub Pages](https://natasha-01-design.github.io/project1-redone/)
+
 
 
 
