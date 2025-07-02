@@ -18,7 +18,7 @@ function displayReport(report) {
 
 function loadReports() {
   const reportList = document.getElementById("report-list");
-  fetch("http://localhost:3000/reports")
+  fetch("http://localhost:3002/reports")
     .then(res => res.json())
     .then(data => {
       if (reportList) {
@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
       const newReport = { title, description, videoURL };
 
-      fetch("http://localhost:3000/reports", {
+      fetch("http://localhost:3002/reports", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newReport)
