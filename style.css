@@ -1,114 +1,98 @@
- /* Hide all sections by default */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1699100329878-7f28bb780787?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* === Section Visibility === */
 #home-section,
 #login-section,
 #register-section,
 #mainAPP {
   display: none;
 }
+
 #home-section.show {
   display: block;
 }
 
- body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        background-image: url(https://images.unsplash.com/photo-1699100329878-7f28bb780787?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-        /* Background image properties */
-        min-height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-            
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        font-size: 16px;
-        line-height: 1.6;
-        font-family: 'Poppins', sans-serif;
- }
-    .container {
-        max-width: 500px;
-        margin: 0 auto;
-       
-        text-align: center;
-        background-color: rgb(253, 251, 214);
-        border-radius: 25px;
-        padding: 80px;
-        box-shadow:orange 0px 0px 20px 0px,
-                   orange 0px 0px 20px 0px
-                    
-                    
-    }
-    h1 {
-        color: #030303;
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-    p {
-        color: #000000;
-        font: 1em sans-serif;
-    }
-    button {
-        padding: 10px 20px;
-        margin: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-    }
-    button:hover {
-        background-color: #0056b3;
-    }
-    
-    
-    
-    /* Style for input fields inside forms */
-#loginForm input {
-  width: 100%;               
-  padding: 10px;            
-  margin-bottom: 15px;       
-  border: 1px solid #ccc;    
-  border-radius: 8px;        
-  font-size: 16px;           
-  box-sizing: border-box;  
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: rgb(253, 251, 214);
+  border-radius: 25px;
+  padding: 5vw;
+  box-shadow: orange 0px 0px 20px 0px;
 }
 
-/* Optional: make the form a bit narrower and centered */
-#loginForm {
-  max-width: 400px;
-  margin: 0 auto;
+
+h1 {
+  color: #030303;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.mainAPP {
-    background-color:white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+p {
+  color: #000;
+  font-size: 1rem;
 }
-/* FORM INPUTS & PLACEHOLDERS */
+
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* === Forms === */
+#loginForm input,
 .report-form input,
 .report-form textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  border-radius: 8px;
   font-size: 1rem;
-  box-sizing: border-box;
 }
 
-/* Bigger textarea */
+#loginForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .report-form textarea.describe {
   height: 150px;
   resize: vertical;
 }
 
-/* Slide-up animation effect on focus */
 .report-form input:focus,
 .report-form textarea:focus {
   outline: none;
@@ -117,7 +101,6 @@
   box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
 }
 
-/* BUTTON STYLE */
 .report-form button {
   padding: 10px 16px;
   border: none;
@@ -128,9 +111,20 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .report-form button:hover {
   background-color: #0056b3;
 }
+
+
+.mainAPP {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .report-list {
   display: flex;
@@ -141,21 +135,30 @@
 }
 
 .report-item {
-  width: 45%;
-  background-color: #e4e2e2;
+  width: 100%;
+  max-width: 400px;
+  background-color: #e6fbfc;
+  border: 1px solid #baecf5;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 1rem;
-  transition: all 0.3s ease;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(12, 11, 11, 0.1),
+              0 4px 8px rgba(12, 11, 11, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
   overflow: hidden;
   max-height: 120px;
-  position: relative;
+}
+
+.report-item:hover {
+  transform: scale(1.01);
+  background-color: #aabdc5;
 }
 
 .report-item.expanded {
   max-height: 1000px;
-  background-color: #e6e3e3;
+  background-color: #c6ebf5;
+  border-color: #a946b6;
 }
 
 .report-item h4 {
@@ -173,25 +176,45 @@
   text-decoration: none;
   font-weight: 500;
 }
-.report-item {
-  background-color: #e6fbfc;             
-  border: 1px solid #baecf5;            
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 20px;                    
-  box-shadow: 0 4px 8px rgba(12, 11, 11, 0.1),
-         0 4px 8px rgba(12, 11, 11, 0.1);
-  transition: transform 0.3s, background-color 0.3s;
-  cursor: pointer;
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .report-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .report-item {
+    max-width: 90%;
+  }
 }
 
-.report-item:hover {
-  transform: scale(1.01);
-  background-color: #aabdc5;              
-}
-.report-item.expanded {
-  background-color: #c6ebf5;
-  border-color: #a946b6;
-}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
 
+  .container {
+    padding: 30px 15px;
+  }
 
+  .report-form input,
+  .report-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .report-item {
+    padding: 12px;
+  }
+}
