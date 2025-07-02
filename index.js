@@ -29,8 +29,13 @@ function loadReports() {
 }
 
 function loadJusticeNews() {
-  const apiKey = "pub_ecb70293783649cdae1ba6a68ef51797";
-  const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=justice&language=en`;
+  const apiKey = "c87926825ea6c0270b4191913294fafc";
+  const url = `https://gnews.io/api/v4/search?q=justice&lang=en&max=10&token=${apiKey}`;
+
+  if (!apiKey) {
+    console.error("API key is missing. Please set your GNews API key.");
+    return;
+  }
 
   fetch(url)
     .then(response => response.json())
@@ -40,18 +45,18 @@ function loadJusticeNews() {
 
       newsList.innerHTML = "";
 
-      if (!data.results || data.results.length === 0) {
+      if (!data.articles || data.articles.length === 0) {
         newsList.innerHTML = "<p>No justice-related news found.</p>";
         return;
       }
 
-      data.results.forEach(article => {
+      data.articles.forEach(article => {
         const div = document.createElement("div");
         div.classList.add("report-item", "news-item");
         div.innerHTML = `
           <h4>${article.title}</h4>
           <p>${article.description || "No description available."}</p>
-          <a href="${article.link}" target="_blank">Read more</a>
+          <a href="${article.url}" target="_blank">Read more</a>
           <hr/>
         `;
         newsList.appendChild(div);
@@ -65,6 +70,7 @@ function loadJusticeNews() {
       }
     });
 }
+
 
 function showSection(sectionId) {
   const allSections = ["home-section", "login-section", "register-section", "mainAPP"];
@@ -93,10 +99,6 @@ window.addEventListener("DOMContentLoaded", function () {
       showSection("home-section");
     }
   }
-
-  // The rest of your event listeners...
-
-
 
   const loginButton = document.getElementById("loginButton");
   if (loginButton) {
