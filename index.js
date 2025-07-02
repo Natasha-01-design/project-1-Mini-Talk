@@ -18,7 +18,7 @@ function displayReport(report) {
 
 function loadReports() {
   const reportList = document.getElementById("report-list");
-  fetch("http://localhost:3002/reports")
+  fetch("http://localhost:3003/reports")
     .then(res => res.json())
     .then(data => {
       if (reportList) {
@@ -36,10 +36,8 @@ function loadJusticeNews() {
     .then(response => response.json())
     .then(data => {
       const newsList = document.getElementById("news-list");
-      if (!newsList) {
-        console.error('Element with id "news-list" not found.');
-        return;
-      }
+      if (!newsList) return;
+
       newsList.innerHTML = "";
 
       if (!data.results || data.results.length === 0) {
@@ -81,18 +79,17 @@ function showSection(sectionId) {
 window.addEventListener("DOMContentLoaded", function () {
   const page = new URLSearchParams(window.location.search).get("page");
 
-  // Auto-login if loggedIn flag is set
- if (page === "login") {
-  showSection("login-section");
-} else if (page === "register") {
-  showSection("register-section");
-} else if (localStorage.getItem("loggedIn") === "true") {
-  showSection("mainAPP");
-  loadJusticeNews();
-  loadReports();
-} else {
-  showSection("home-section");
-}
+  if (page === "login") {
+    showSection("login-section");
+  } else if (page === "register") {
+    showSection("register-section");
+  } else if (localStorage.getItem("loggedIn") === "true") {
+    showSection("mainAPP");
+    loadJusticeNews();
+    loadReports();
+  } else {
+    showSection("home-section");
+  }
 
   const loginButton = document.getElementById("loginButton");
   if (loginButton) {
@@ -129,7 +126,6 @@ window.addEventListener("DOMContentLoaded", function () {
   if (registerForm) {
     registerForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
       localStorage.setItem("loggedIn", "true");
       showSection("mainAPP");
       loadJusticeNews();
@@ -148,28 +144,30 @@ window.addEventListener("DOMContentLoaded", function () {
 
       const newReport = { title, description, videoURL };
 
-      fetch("http://localhost:3002/reports", {
+      fetch("http://localhost:3003/reports", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newReport)
       })
         .then(response => response.json())
         .then(() => {
-          loadReports();
           reportForm.reset();
+          loadReports();
+          showSection("mainAPP");
         })
         .catch(error => {
           console.error("Error submitting report:", error);
         });
     });
   }
+
+  const logoutButton = document.getElementById("logoutButton");
+  if (logoutButton) {
+    logoutButton.addEventListener("click", function () {
+      localStorage.removeItem("loggedIn");
+      showSection("home-section");
+      window.history.pushState({}, "", "index.html");
+    });
+  }
 });
-const logoutButton = document.getElementById("logoutButton");
-if (logoutButton) {
-  logoutButton.addEventListener("click", function () {
-    localStorage.removeItem("loggedIn");
-    showSection("home-section");
-    window.history.pushState({}, "", "index.html"); 
-  });
-}
 

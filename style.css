@@ -1,3 +1,14 @@
+ /* Hide all sections by default */
+#home-section,
+#login-section,
+#register-section,
+#mainAPP {
+  display: none;
+}
+#home-section.show {
+  display: block;
+}
+
  body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
