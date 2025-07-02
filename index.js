@@ -77,16 +77,26 @@ function showSection(sectionId) {
 }
 
 window.addEventListener("DOMContentLoaded", function () {
-  const page = new URLSearchParams(window.location.search).get("page");
+  // Check if user is already logged in
+  if (localStorage.getItem("loggedIn") === "true") {
+    showSection("mainAPP");
+    loadJusticeNews();
+    loadReports();
+  } else {
+    const page = new URLSearchParams(window.location.search).get("page");
 
-  if (page === "login") {
-    showSection("login-section");
-  } else if (page === "register") {
-    showSection("register-section");
-  } 
-   else {
-    showSection("home-section");
+    if (page === "login") {
+      showSection("login-section");
+    } else if (page === "register") {
+      showSection("register-section");
+    } else {
+      showSection("home-section");
+    }
   }
+
+  // The rest of your event listeners...
+
+
 
   const loginButton = document.getElementById("loginButton");
   if (loginButton) {
