@@ -18,7 +18,7 @@ function displayReport(report) {
 
 function loadReports() {
   const reportList = document.getElementById("report-list");
-  fetch("http://localhost:3003/reports")
+  fetch("http://localhost:3002/reports")
     .then(res => res.json())
     .then(data => {
       if (reportList) {
@@ -83,11 +83,8 @@ window.addEventListener("DOMContentLoaded", function () {
     showSection("login-section");
   } else if (page === "register") {
     showSection("register-section");
-  } else if (localStorage.getItem("loggedIn") === "true") {
-    showSection("mainAPP");
-    loadJusticeNews();
-    loadReports();
-  } else {
+  } 
+   else {
     showSection("home-section");
   }
 
@@ -144,7 +141,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
       const newReport = { title, description, videoURL };
 
-      fetch("http://localhost:3003/reports", {
+      fetch("http://localhost:3002/reports", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newReport)
