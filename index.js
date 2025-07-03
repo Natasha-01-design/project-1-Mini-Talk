@@ -40,6 +40,7 @@ function loadJusticeNews() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+    
       const newsList = document.getElementById("news-list");
       if (!newsList) return;
 
@@ -53,12 +54,12 @@ function loadJusticeNews() {
       data.articles.forEach(article => {
         const div = document.createElement("div");
         div.classList.add("report-item", "news-item");
-        div.innerHTML = `
-          <h4>${article.title}</h4>
-          <p>${article.description || "No description available."}</p>
-          <a href="${article.url}" target="_blank">Read more</a>
-          <hr/>
-        `;
+       div.innerHTML = `
+  <h4>${article.title}</h4>
+  <p>${article.description || "Click below to read the full article."}</p>
+  <a href="${article.url}" target="_blank"> Read Full Article</a>
+  <hr/>
+`;
         newsList.appendChild(div);
       });
     })
