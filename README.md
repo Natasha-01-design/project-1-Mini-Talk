@@ -1,6 +1,6 @@
 # Mini Talk — A Civic Justice Reporting Platform
 
-**Mini Talk** is a web-based platform that allows users to report social injustices. It supports account creation, login, report submission with optional video links, and displays current justice-related news using the NewsData.io API. All reports are stored and retrieved locally using `json-server`.
+**Mini Talk** is a web-based platform that allows users to report social injustices. It supports account creation, login, report submission with optional video links, and displays current justice-related news using Gnews.io API. All reports are stored and retrieved locally using `json-server`.
 
 ## Features
 
@@ -26,9 +26,6 @@ MiniTalk/
 ├── index.js
 ├── db.json
 
-markdown
-Copy
-Edit
 
 ## Getting Started
 
@@ -46,9 +43,7 @@ Edit
 npm install -g json-server
 Step 2: Clone the Repository
 bash
-Copy
-Edit
-git clone https://github.com/your-username/minitalk.git
+git clone https://github.com/Natasha-01-design/project-1-Mini-Talk.git
 cd minitalk
 Step 3: Start the API Server
 bash
@@ -59,7 +54,7 @@ Step 4: Launch the App
 Open index.html in your browser
 Or use Live Server in VS Code
 
-Configuring NewsData API
+Configuring Gnews API
 Sign up for a free API key at gnews.io
 
 Open index.js and replace the placeholder:
